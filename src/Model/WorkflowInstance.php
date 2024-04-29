@@ -535,7 +535,7 @@ class WorkflowInstance implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param map[string,?string] $users users
+     * @param map[string,?string] $users Contains the list of Users and Steps mapping
      *
      * @return $this
      */

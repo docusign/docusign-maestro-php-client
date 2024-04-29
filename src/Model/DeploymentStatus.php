@@ -52,6 +52,8 @@ class DeploymentStatus
     const DELETE_IN_PROGRESS = 'Delete in Progress';
     const DELETED = 'Deleted';
     const NOT_DEPLOYED = 'Not Deployed';
+    const UNPUBLISH_IN_PROGRESS = 'Unpublish in Progress';
+    const UNPUBLISHED = 'Unpublished';
     
     /**
      * Gets allowable values of the enum
@@ -66,6 +68,8 @@ class DeploymentStatus
             self::DELETE_IN_PROGRESS,
             self::DELETED,
             self::NOT_DEPLOYED,
+            self::UNPUBLISH_IN_PROGRESS,
+            self::UNPUBLISHED,
         ];
     }
 }

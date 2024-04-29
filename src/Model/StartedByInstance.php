@@ -174,6 +174,7 @@ class StartedByInstance implements ModelInterface, ArrayAccess
     const STARTED_BY_TYPE_ANONYMOUS = 'Anonymous';
     const STARTED_BY_TYPE_PREPARER = 'Preparer';
     const STARTED_BY_TYPE_PARTICIPANT = 'Participant';
+    const STARTED_BY_TYPE_ON_BEHALF_OF = 'OnBehalfOf';
     
 
     
@@ -188,6 +189,7 @@ class StartedByInstance implements ModelInterface, ArrayAccess
             self::STARTED_BY_TYPE_ANONYMOUS,
             self::STARTED_BY_TYPE_PREPARER,
             self::STARTED_BY_TYPE_PARTICIPANT,
+            self::STARTED_BY_TYPE_ON_BEHALF_OF,
         ];
     }
     

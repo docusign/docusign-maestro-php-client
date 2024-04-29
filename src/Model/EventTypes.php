@@ -46,6 +46,19 @@ class EventTypes
     /**
      * Possible values of this enum
      */
+    const ENVELOPE_SENT = 'envelope-sent';
+    const ENVELOPE_DELIVERED = 'envelope-delivered';
+    const ENVELOPE_COMPLETED = 'envelope-completed';
+    const ENVELOPE_DECLINED = 'envelope-declined';
+    const ENVELOPE_VOIDED = 'envelope-voided';
+    const ENVELOPE_CREATED = 'envelope-created';
+    const ENVELOPE_RESENT = 'envelope-resent';
+    const ENVELOPE_CORRECTED = 'envelope-corrected';
+    const ENVELOPE_PURGE = 'envelope-purge';
+    const ENVELOPE_DELETED = 'envelope-deleted';
+    const ENVELOPE_DISCARD = 'envelope-discard';
+    const DELIVERY_FAILED = 'Delivery Failed';
+    const AUTHENTICATION_FAILED = 'Authentication Failed';
     const SENT = 'Sent';
     const DELIVERED = 'Delivered';
     const SIGNED = 'Signed';
@@ -58,6 +71,19 @@ class EventTypes
     public static function getAllowableEnumValues()
     {
         return [
+            self::ENVELOPE_SENT,
+            self::ENVELOPE_DELIVERED,
+            self::ENVELOPE_COMPLETED,
+            self::ENVELOPE_DECLINED,
+            self::ENVELOPE_VOIDED,
+            self::ENVELOPE_CREATED,
+            self::ENVELOPE_RESENT,
+            self::ENVELOPE_CORRECTED,
+            self::ENVELOPE_PURGE,
+            self::ENVELOPE_DELETED,
+            self::ENVELOPE_DISCARD,
+            self::DELIVERY_FAILED,
+            self::AUTHENTICATION_FAILED,
             self::SENT,
             self::DELIVERED,
             self::SIGNED,

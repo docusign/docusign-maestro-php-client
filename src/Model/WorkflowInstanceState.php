@@ -46,9 +46,11 @@ class WorkflowInstanceState
     /**
      * Possible values of this enum
      */
+    const CREATED = 'Created';
     const IN_PROGRESS = 'In Progress';
     const COMPLETED = 'Completed';
     const FAILED = 'Failed';
+    const CANCELED = 'Canceled';
     
     /**
      * Gets allowable values of the enum
@@ -57,9 +59,11 @@ class WorkflowInstanceState
     public static function getAllowableEnumValues()
     {
         return [
+            self::CREATED,
             self::IN_PROGRESS,
             self::COMPLETED,
             self::FAILED,
+            self::CANCELED,
         ];
     }
 }

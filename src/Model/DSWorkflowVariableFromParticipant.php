@@ -37,7 +37,7 @@ use DocuSign\Maestro\ObjectSerializer;
  * DSWorkflowVariableFromParticipant Class Doc Comment
  *
  * @category    Class
- * @description DS Workflow Variable from a Participant
+ * @description DS Workflow Variable from a Participant object. The definition is flexible based on the workflow definition.
  * @package     DocuSign\Maestro
  * @author      Swagger Codegen team <apihelp@docusign.com>
  * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
@@ -60,9 +60,7 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'key' => '\DocuSign\Maestro\Model\ParticipantKeys',
-        'participant_id' => '?string',
-        'source' => '\DocuSign\Maestro\Model\DSWorkflowVariableSourceTypesParticipant'
+        
     ];
 
     /**
@@ -71,9 +69,7 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'key' => null,
-        'participant_id' => null,
-        'source' => null
+        
     ];
 
     /**
@@ -103,9 +99,7 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'key' => 'key',
-        'participant_id' => 'participantId',
-        'source' => 'source'
+        
     ];
 
     /**
@@ -114,9 +108,7 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'key' => 'setKey',
-        'participant_id' => 'setParticipantId',
-        'source' => 'setSource'
+        
     ];
 
     /**
@@ -125,9 +117,7 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'key' => 'getKey',
-        'participant_id' => 'getParticipantId',
-        'source' => 'getSource'
+        
     ];
 
     /**
@@ -190,9 +180,6 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['participant_id'] = isset($data['participant_id']) ? $data['participant_id'] : null;
-        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
     }
 
     /**
@@ -204,15 +191,6 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-        if ($this->container['participant_id'] === null) {
-            $invalidProperties[] = "'participant_id' can't be null";
-        }
-        if ($this->container['source'] === null) {
-            $invalidProperties[] = "'source' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -227,78 +205,6 @@ class DSWorkflowVariableFromParticipant implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets key
-     *
-     * @return \DocuSign\Maestro\Model\ParticipantKeys
-     */
-    public function getKey()
-    {
-        return $this->container['key'];
-    }
-
-    /**
-     * Sets key
-     *
-     * @param \DocuSign\Maestro\Model\ParticipantKeys $key key
-     *
-     * @return $this
-     */
-    public function setKey($key)
-    {
-        $this->container['key'] = $key;
-
-        return $this;
-    }
-
-    /**
-     * Gets participant_id
-     *
-     * @return ?string
-     */
-    public function getParticipantId()
-    {
-        return $this->container['participant_id'];
-    }
-
-    /**
-     * Sets participant_id
-     *
-     * @param ?string $participant_id participant_id
-     *
-     * @return $this
-     */
-    public function setParticipantId($participant_id)
-    {
-        $this->container['participant_id'] = $participant_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets source
-     *
-     * @return \DocuSign\Maestro\Model\DSWorkflowVariableSourceTypesParticipant
-     */
-    public function getSource()
-    {
-        return $this->container['source'];
-    }
-
-    /**
-     * Sets source
-     *
-     * @param \DocuSign\Maestro\Model\DSWorkflowVariableSourceTypesParticipant $source source
-     *
-     * @return $this
-     */
-    public function setSource($source)
-    {
-        $this->container['source'] = $source;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *

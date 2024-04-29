@@ -49,6 +49,7 @@ class WorkflowStepHistoryState
     const IN_PROGRESS = 'In Progress';
     const COMPLETED = 'Completed';
     const FAILED = 'Failed';
+    const CANCELED = 'Canceled';
     
     /**
      * Gets allowable values of the enum
@@ -60,6 +61,7 @@ class WorkflowStepHistoryState
             self::IN_PROGRESS,
             self::COMPLETED,
             self::FAILED,
+            self::CANCELED,
         ];
     }
 }

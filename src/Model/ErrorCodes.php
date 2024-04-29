@@ -60,6 +60,7 @@ class ErrorCodes
     const _10202 = 'ERR_10202';
     const _10301 = 'ERR_10301';
     const _10302 = 'ERR_10302';
+    const _10401 = 'ERR_10401';
     const _10801 = 'ERR_10801';
     const _10802 = 'ERR_10802';
     const _10999 = 'ERR_10999';
@@ -85,6 +86,7 @@ class ErrorCodes
             self::_10202,
             self::_10301,
             self::_10302,
+            self::_10401,
             self::_10801,
             self::_10802,
             self::_10999,
