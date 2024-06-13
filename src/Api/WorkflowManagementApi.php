@@ -234,7 +234,7 @@ class WorkflowManagementApi
             throw new \InvalidArgumentException('Missing the required parameter $body when calling createWorkflowDefinition');
         }
         // parse inputs
-        $resourcePath = "aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions";
+        $resourcePath = "/v1/accounts/{accountId}/management/workflow_definitions";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -273,7 +273,7 @@ class WorkflowManagementApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\NewOrUpdatedWorkflowDefinitionResponse',
-                'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions'
+                '/v1/accounts/{accountId}/management/workflow_definitions'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\NewOrUpdatedWorkflowDefinitionResponse', $httpHeader), $statusCode, $httpHeader];
@@ -340,7 +340,7 @@ class WorkflowManagementApi
             throw new \InvalidArgumentException('Missing the required parameter $workflow_definition_id when calling deleteWorkflowDefinition');
         }
         // parse inputs
-        $resourcePath = "aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}";
+        $resourcePath = "/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -378,7 +378,7 @@ class WorkflowManagementApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\WorkflowDeleteResponse',
-                'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}'
+                '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\WorkflowDeleteResponse', $httpHeader), $statusCode, $httpHeader];
@@ -443,7 +443,7 @@ class WorkflowManagementApi
             throw new \InvalidArgumentException('Missing the required parameter $workflow_definition_id when calling getWorkflowDefinition');
         }
         // parse inputs
-        $resourcePath = "aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}";
+        $resourcePath = "/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -488,7 +488,7 @@ class WorkflowManagementApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\WorkflowDefinitionWithId',
-                'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}'
+                '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\WorkflowDefinitionWithId', $httpHeader), $statusCode, $httpHeader];
@@ -559,7 +559,7 @@ class WorkflowManagementApi
             throw new \InvalidArgumentException('Missing the required parameter $workflow_definition_id when calling getWorkflowDefinitionConfigInstances');
         }
         // parse inputs
-        $resourcePath = "aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/configInstances";
+        $resourcePath = "/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/config_instances";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -597,7 +597,7 @@ class WorkflowManagementApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\GetConfigurationInstancesResponse',
-                'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/configInstances'
+                '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/config_instances'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\GetConfigurationInstancesResponse', $httpHeader), $statusCode, $httpHeader];
@@ -668,7 +668,7 @@ class WorkflowManagementApi
             throw new \InvalidArgumentException('Missing the required parameter $account_id when calling getWorkflowDefinitions');
         }
         // parse inputs
-        $resourcePath = "aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions";
+        $resourcePath = "/v1/accounts/{accountId}/management/workflow_definitions";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -709,7 +709,7 @@ class WorkflowManagementApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\WorkflowDefinitionList',
-                'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions'
+                '/v1/accounts/{accountId}/management/workflow_definitions'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\WorkflowDefinitionList', $httpHeader), $statusCode, $httpHeader];
@@ -786,7 +786,7 @@ class WorkflowManagementApi
             throw new \InvalidArgumentException('Missing the required parameter $body when calling publishOrUnPublishWorkflowDefinition');
         }
         // parse inputs
-        $resourcePath = "aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/publish";
+        $resourcePath = "/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/publish";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -829,7 +829,7 @@ class WorkflowManagementApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\DeployResponse',
-                'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}/publish'
+                '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}/publish'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\DeployResponse', $httpHeader), $statusCode, $httpHeader];
@@ -906,7 +906,7 @@ class WorkflowManagementApi
             throw new \InvalidArgumentException('Missing the required parameter $body when calling updateWorkflowDefinition');
         }
         // parse inputs
-        $resourcePath = "aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}";
+        $resourcePath = "/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -949,7 +949,7 @@ class WorkflowManagementApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\NewOrUpdatedWorkflowDefinitionResponse',
-                'aow-manage/v1.0/management/accounts/{accountId}/workflowDefinitions/{workflowDefinitionId}'
+                '/v1/accounts/{accountId}/management/workflow_definitions/{workflowDefinitionId}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\NewOrUpdatedWorkflowDefinitionResponse', $httpHeader), $statusCode, $httpHeader];
