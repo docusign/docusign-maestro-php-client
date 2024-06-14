@@ -187,15 +187,16 @@ class WorkflowTriggerApi
      * Creates a new workflow instance after authenticating with DS Account Server
      *
      * @param ?string $account_id Account ID
+     * @param ?string $workflow_definition_id Workflow Definition ID
      * @param \DocuSign\Maestro\Model\TriggerPayload $body JSON payload that will be passed to the triggered workflow (required)
      * @param  \DocuSign\Maestro\Api\WorkflowTriggerApi\TriggerWorkflowOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return \DocuSign\Maestro\Model\TriggerWorkflowViaPostResponse
      */
-    public function triggerWorkflow($account_id, $body, \DocuSign\Maestro\Api\WorkflowTriggerApi\TriggerWorkflowOptions $options = null)
+    public function triggerWorkflow($account_id, $workflow_definition_id, $body, \DocuSign\Maestro\Api\WorkflowTriggerApi\TriggerWorkflowOptions $options = null)
     {
-        list($response) = $this->triggerWorkflowWithHttpInfo($account_id, $body, $options);
+        list($response) = $this->triggerWorkflowWithHttpInfo($account_id, $workflow_definition_id, $body, $options);
         return $response;
     }
 
@@ -205,24 +206,29 @@ class WorkflowTriggerApi
      * Creates a new workflow instance after authenticating with DS Account Server
      *
      * @param ?string $account_id Account ID
+     * @param ?string $workflow_definition_id Workflow Definition ID
      * @param \DocuSign\Maestro\Model\TriggerPayload $body JSON payload that will be passed to the triggered workflow (required)
      * @param  \DocuSign\Maestro\Api\WorkflowTriggerApi\TriggerWorkflowOptions  $options for modifying the behavior of the function. (optional)
      *
      * @throws ApiException on non-2xx response
      * @return array of \DocuSign\Maestro\Model\TriggerWorkflowViaPostResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function triggerWorkflowWithHttpInfo($account_id, $body, \DocuSign\Maestro\Api\WorkflowTriggerApi\TriggerWorkflowOptions $options = null): array
+    public function triggerWorkflowWithHttpInfo($account_id, $workflow_definition_id, $body, \DocuSign\Maestro\Api\WorkflowTriggerApi\TriggerWorkflowOptions $options = null): array
     {
         // verify the required parameter 'account_id' is set
         if ($account_id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $account_id when calling triggerWorkflow');
+        }
+        // verify the required parameter 'workflow_definition_id' is set
+        if ($workflow_definition_id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $workflow_definition_id when calling triggerWorkflow');
         }
         // verify the required parameter 'body' is set
         if ($body === null) {
             throw new \InvalidArgumentException('Missing the required parameter $body when calling triggerWorkflow');
         }
         // parse inputs
-        $resourcePath = "aow-auth/v1.0/accounts/{accountId}/workflows/trigger";
+        $resourcePath = "/v1/accounts/{accountId}/workflow_definitions/{workflowDefinitionId}/trigger";
         $httpBody = $_tempBody ?? ''; // $_tempBody is the method argument, if present
         $queryParams = $headerParams = $formParams = [];
         $headerParams['Accept'] ??= $this->apiClient->selectHeaderAccept(['application/json']);
@@ -242,6 +248,10 @@ class WorkflowTriggerApi
         // path params
         if ($account_id !== null) {
             $resourcePath = self::updateResourcePath($resourcePath, "accountId", $account_id);
+        }
+        // path params
+        if ($workflow_definition_id !== null) {
+            $resourcePath = self::updateResourcePath($resourcePath, "workflowDefinitionId", $workflow_definition_id);
         }
 
         // default format to json
@@ -271,7 +281,7 @@ class WorkflowTriggerApi
                 $httpBody,
                 $headerParams,
                 '\DocuSign\Maestro\Model\TriggerWorkflowViaPostResponse',
-                'aow-auth/v1.0/accounts/{accountId}/workflows/trigger'
+                '/v1/accounts/{accountId}/workflow_definitions/{workflowDefinitionId}/trigger'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\DocuSign\Maestro\Model\TriggerWorkflowViaPostResponse', $httpHeader), $statusCode, $httpHeader];
