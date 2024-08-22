@@ -7,7 +7,7 @@
  * @category Class
  * @package  DocuSign\Maestro
  * @author   Swagger Codegen team <apihelp@docusign.com>
- * @license  The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license  The Docusign PHP Client SDK is licensed under the MIT License.
  * @link     https://github.com/swagger-api/swagger-codegen
  */
 
@@ -40,7 +40,7 @@ use DocuSign\Maestro\ObjectSerializer;
  * @description Details of a Workflow Instance triggered for a Workflow Definition
  * @package     DocuSign\Maestro
  * @author      Swagger Codegen team <apihelp@docusign.com>
- * @license     The DocuSign PHP Client SDK is licensed under the MIT License.
+ * @license     The Docusign PHP Client SDK is licensed under the MIT License.
  * @link        https://github.com/swagger-api/swagger-codegen
  */
 class WorkflowInstance implements ModelInterface, ArrayAccess
