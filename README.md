@@ -1,6 +1,17 @@
+
+## ⚠️ Deprecation Notice
+This SDK is deprecated and no longer actively maintained.
+
+Docusign has launched a new IAM SDK, which includes support for Maestro, Navigator and Connected Fields API families in a single, unified package.
+
+👉 We recommend migrating to the IAM SDK for the latest updates, support, and a streamlined developer experience.
+
+🔗 [Learn more and get started](https://developers.docusign.com/docs/sdks/)
+
 # The Official DocuSign Maestro PHP Client SDK
 
 [![Build status][travis-image]][travis-url]
+![Deprecated](https://img.shields.io/badge/status-deprecated-red.svg)
 
 ## Requirements
 *   PHP 7.4+
