@@ -111,12 +111,11 @@ use DocuSign\Maestro\ObjectSerializer;
 
 /**
  * WorkflowTriggerApi Class Doc Comment
- *
+ * @deprecated Maestro is now available as part of the new IAM SDK: https://developers.docusign.com/docs/sdks/ .
  * @category Class
  * @package  DocuSign\Maestro
  * @author   Swagger Codegen team <apihelp@docusign.com>
  * @license  The Docusign PHP Client SDK is licensed under the MIT License.
- * @link     https://github.com/swagger-api/swagger-codegen
  */
 class WorkflowTriggerApi
 {

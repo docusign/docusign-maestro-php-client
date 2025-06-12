@@ -1,6 +1,6 @@
 {
     "name": "docusign/maestro-client",
-    "description": "The Docusign package makes integrating Docusign into your apps and websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-maestro-php-client repository.",
+    "description": "⚠️ Deprecated – Maestro is now available as part of the new IAM SDK: https://developers.docusign.com/docs/sdks/ . The Docusign package makes integrating Docusign into your apps and websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-maestro-php-client repository.",
     "keywords": [
         "Docusign",
         "Maestro",
