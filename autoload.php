@@ -1,5 +1,15 @@
 <?php
 /**
+ * ⚠️ Deprecated – Maestro is now available as part of the new IAM SDK: https://developers.docusign.com/docs/sdks/ .
+ */
+
+// Emit a deprecation warning when the SDK is loaded
+@trigger_error(
+    "⚠️ Deprecated – Maestro is now available as part of the new IAM SDK: https://developers.docusign.com/docs/sdks/ .",
+    E_USER_DEPRECATED
+);
+
+/**
  * An example of a project-specific implementation.
  * 
  * After registering this autoload function with SPL, the following line
